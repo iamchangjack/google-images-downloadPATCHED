@@ -249,6 +249,7 @@ class googleimagesdownload:
         options.add_argument("--headless")
 
         try:
+            # Jack: REPLACE THE FOLLOWING ADDRESS WITH WHICHEVER LOCATION YOUR chromedriver.exe is in
             browser = webdriver.Chrome("D:\Work\PycharmProjects\google-images-downloadPATCHED\chromedriver.exe", chrome_options=options)
         except Exception as e:
             print("Looks like we cannot locate the path the 'chromedriver' (use the '--chromedriver' "
