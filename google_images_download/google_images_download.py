@@ -791,10 +791,10 @@ class googleimagesdownload:
                 else:
                     path = main_directory + "/" + dir_name + "/" + prefix + str(count) + "." + image_name
 
-                # jack's way to change image names. remove if not needed
+                # jack's way to change image names appropriately. remove if not needed
                 # path = main_directory + "/" + dir_name + "/" + dir_name + "_" + str(count) + ".jpg" # jpg good for ML
                 path = main_directory + "/" + dir_name + "/" + str(count) + ".jpg"  # version with no class name
-                # end of personal
+                # end of jack's changes
 
                 try:
                     output_file = open(path, 'wb')
