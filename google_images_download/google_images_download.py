@@ -249,7 +249,7 @@ class googleimagesdownload:
         options.add_argument("--headless")
 
         try:
-            browser = webdriver.Chrome(chromedriver, chrome_options=options)
+            browser = webdriver.Chrome("D:\Work\PycharmProjects\google-images-downloadPATCHED\chromedriver.exe", chrome_options=options)
         except Exception as e:
             print("Looks like we cannot locate the path the 'chromedriver' (use the '--chromedriver' "
                   "argument to specify the path to the executable.) or google chrome browser is not "
@@ -719,6 +719,7 @@ class googleimagesdownload:
     def download_image(self, image_url, image_format, main_directory, dir_name, count, print_urls, socket_timeout,
                        prefix, print_size, no_numbering, no_download, save_source, img_src, silent_mode, thumbnail_only,
                        format, ignore_urls):
+
         if not silent_mode:
             if print_urls or no_download:
                 print("Image URL: " + image_url)
@@ -789,6 +790,11 @@ class googleimagesdownload:
                     path = main_directory + "/" + dir_name + "/" + prefix + image_name
                 else:
                     path = main_directory + "/" + dir_name + "/" + prefix + str(count) + "." + image_name
+
+                # jack's way to change image names. remove if not needed
+                # path = main_directory + "/" + dir_name + "/" + dir_name + "_" + str(count) + ".jpg" # jpg good for ML
+                path = main_directory + "/" + dir_name + "/" + str(count) + ".jpg"  # version with no class name
+                # end of personal
 
                 try:
                     output_file = open(path, 'wb')
