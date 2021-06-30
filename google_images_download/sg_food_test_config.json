@@ -1,0 +1,18 @@
+{
+    "Records": [
+        {
+            "keywords": "singapore chicken rice",
+            "limit": 400,
+            "size": "medium",
+            "type": "photo",
+            "image_directory" : "hainanese_chicken_rice"
+        },
+        {
+            "keywords": "singapore laksa",
+            "limit": 400,
+            "size": "medium",
+            "type": "photo",
+            "image_directory" : "laksa"
+        }
+    ]
+}
